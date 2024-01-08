@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+		<title>Dashboard</title>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400;500;700&display=swap" rel="stylesheet">
+		
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster&family=Pacifico&display=swap" rel="stylesheet"> 
+		
+		
+		
+		
+		 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		
+
+
+		<style>
+		
+		
+			:root{
+				--body-color:#183D3D;
+				--accordian-color:#5C8374;
+				--side-color::#183D3D;
+				--navbar-color:#5C8374;
+			}
+			.navbar{
+				background-color:var(--navbar-color);
+				border:2px solid white;
+			}
+			.accordion{
+			background-color:var(--accordian-color);
+			}
+			body{
+			background-color:var(--body-color);
+			}
+			.sidebar {
+			  height: 100%;
+			  width: 80px;
+			  position: fixed;
+			  z-index: 1;
+			  top: 0;
+			  left: 0;
+			  background-color:var(--side-color);
+			  overflow-x: hidden;
+			  transition: 0.5s;
+			}
+			
+			.sidebar a {
+			  padding: 8px 8px 8px 32px;
+			  text-decoration: none;
+			  font-size: 25px;
+			  color: #818181;
+			  display: block;
+			  transition: 0.3s;
+			}
+
+			.sidebar a:hover {
+			  color: #f1f1f1;
+			}
+
+			.sidebar .closebtn {
+			  position: absolute;
+			  top: 0;
+			  right: 25px;
+			  font-size: 36px;
+			  margin-left: 50px;
+			}
+
+			.openbtn {
+			  font-size: 20px;
+			  cursor: pointer;
+			  background-color: #111;
+			  color: white;
+			  padding: 10px 15px;
+			  border: none;
+			  margin-left:70px;
+			}
+
+			.openbtn:hover {
+			  background-color: #444;
+			}
+
+			#main {
+			  transition: margin-left .5s;
+			 
+			}
+
+			/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+			@media screen and (max-height: 450px) {
+			  .sidebar {padding-top: 15px;}
+			  .sidebar a {font-size: 18px;}
+			}
+			
+			.accordion-button:not(.collapsed) {
+				color:black;
+				background-color:grey;
+				box-shadow:0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="mySidebar" class="sidebar">
+			<div class="containe">
+				<div class="d-flex">
+					<div> 
+						<i class="fa fa-paw fs-1"aria-hidden="true" style="padding-left:15px;"></i>
+					</div>
+					<div style="padding-left:35px; font-family: 'Great Vibes', cursive;font-size:25px;color:black;">
+						Gentelella Alela!
+					</div>
+				</div>
+					<div class="d-flex">
+						<div>
+							<img src="image/img.png" style="height:70px; width:70px; border:4px solid black;border-radius:50%;"/>
+						</div>
+						<div style="font-family: 'Great Vibes', cursive;font-size:30px;color:black;padding-left:20px; padding-top:15px;">Welcome</div>
+					</div>
+					<div style="padding-start:50px; padding-left:100px;">
+						General
+					</div>
+					<hr style="border:2px solid black;">
+			</div>
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne">
+						<div class="accordion"data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							<i class="fa-solid fa-house  fs-2" style="color:black;"></i>
+							<div class="ps-5">
+								Home
+							</div>
+						</div>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="accordion bg-secondary" id="sub-accordionExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingOne">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											Dashboard1
+										</button>
+									</h2>
+									<div id="sub-collapseOne" class="accordion-collapse collapse" aria-labelledby="sub-headingOne" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingTwo">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseTwo" aria-expanded="false" aria-controls="sub-collapseTwo">
+											Dashboard2
+										</button>
+									</h2>
+									<div id="sub-collapseTwo" class="accordion-collapse collapse" aria-labelledby="sub-headingTwo" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Flush accordian -->
+			<div class="accordion"id="accordionExample">
+				<div class="accordion-item"style="border:none;">
+					<h2 class="accordion-header" id="headingtwo">
+						<div class="accordion"  data-bs-toggle="collapse" data-bs-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+							<div class="d-flex">
+								<img src="image/form.png" style="height:40px; width:40px;"/>
+								<div class="ps-5">
+									Forms
+								</div>
+							</div>
+						</div>
+					</h2>
+					<div id="collapsetwo" class="accordion-collapse collapse " aria-labelledby="headingtwo" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="accordion" id="sub-accordionExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingtwo">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+											Dashboard1
+										</button>
+									</h2>
+									<div id="sub-collapsetwo" class="accordion-collapse collapse" aria-labelledby="sub-headingtwo" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingtwo">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsetwo" aria-expanded="false" aria-controls="sub-collapsetwo">
+											Dashboard2
+										</button>
+									</h2>
+									<div id="sub-collapsetwo" class="accordion-collapse collapse" aria-labelledby="sub-headingtwo" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Flush accordian -->
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item ">
+					<h2 class="accordion-header" id="headingthree">
+						<div class="accordion" type="button mei paun me" data-bs-toggle="collapse" data-bs-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+							<div class="d-flex">
+								<img src="image/grid22.png" style="height:40px; width:40px;"/>
+								<div class="ps-5">
+									Layout
+								</div>
+							</div>
+						</div>
+					</h2>
+					<div id="collapsethree" class="accordion-collapse collapse " aria-labelledby="headingthree" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="accordion bg-secondary" id="sub-accordionExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingthree">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsethree" aria-expanded="true" aria-controls="collapsethree">
+											Dashboard1
+										</button>
+									</h2>
+									<div id="sub-collapsethree" class="accordion-collapse collapse" aria-labelledby="sub-headingthree" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingthree">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsethree" aria-expanded="false" aria-controls="sub-collapsethree">
+											Dashboard2
+										</button>
+									</h2>
+									<div id="sub-collapsethree" class="accordion-collapse collapse" aria-labelledby="sub-headingthree" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Flush accordian -->
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item ">
+					<h2 class="accordion-header" id="headingfour">
+						<div class="accordion" type="button mei paun me" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+							<div class="d-flex">
+								<i class="fa-solid fa-table-cells fs-2" style="color:black;"></i>
+								<div class="ps-5">
+									Tables
+								</div>
+							</div>
+						</div>
+					</h2>
+					<div id="collapsefour" class="accordion-collapse collapse " aria-labelledby="headingfour" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="accordion bg-secondary" id="sub-accordionExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingfour">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsefour" aria-expanded="true" aria-controls="collapsefour">
+											Dashboard1
+										</button>
+									</h2>
+									<div id="sub-collapsefour" class="accordion-collapse collapse" aria-labelledby="sub-headingfour" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingfour">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsefour" aria-expanded="false" aria-controls="sub-collapsefour">
+											Dashboard2
+										</button>
+									</h2>
+									<div id="sub-collapsefour" class="accordion-collapse collapse" aria-labelledby="sub-headingfour" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Flush accordian -->
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item ">
+					<h2 class="accordion-header" id="headingfive">
+						<div class="accordion" type="button mei paun me" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+							<div class="d-flex">
+								<i class="fa-solid fa-table-cells fs-2" style="color:black;"></i>
+								<div class="ps-5">
+									Data Presentation
+								</div>
+							</div>
+						</div>
+					</h2>
+					<div id="collapsefive" class="accordion-collapse collapse " aria-labelledby="headingfive" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="accordion bg-secondary" id="sub-accordionExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingfive">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsefive" aria-expanded="true" aria-controls="collapsefive">
+											Dashboard1
+										</button>
+									</h2>
+									<div id="sub-collapsefive" class="accordion-collapse collapse" aria-labelledby="sub-headingfive" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingfive">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsefive" aria-expanded="false" aria-controls="sub-collapsefive">
+											Dashboard2
+										</button>
+									</h2>
+									<div id="sub-collapsefive" class="accordion-collapse collapse" aria-labelledby="sub-headingfive" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Flush accordian -->
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingsix">
+						<div class="accordion" type="button mei paun me" data-bs-toggle="collapse" data-bs-target="#collapsesix" aria-expanded="true" aria-controls="collapsesix">
+							<div class="d-flex">
+								<i class="fa-solid fa-desktop fs-2" style="color:black;"></i>
+								<div class="ps-5">
+									UI Elements
+								</div>
+							</div>
+						</div>
+					</h2>
+					<div id="collapsesix" class="accordion-collapse collapse " aria-labelledby="headingsix" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="accordion bg-secondary" id="sub-accordionExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingsix">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsesix" aria-expanded="true" aria-controls="collapsesix">
+											Dashboard1
+										</button>
+									</h2>
+									<div id="sub-collapsesix" class="accordion-collapse collapse" aria-labelledby="sub-headingsix" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingsix">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapsesix" aria-expanded="false" aria-controls="sub-collapsesix">
+											Dashboard2
+										</button>
+									</h2>
+									<div id="sub-collapsesix" class="accordion-collapse collapse" aria-labelledby="sub-headingsix" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Flush accordian -->
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingeight">
+						<div class="accordion" type="button mei paun me" data-bs-toggle="collapse" data-bs-target="#collapseeight" aria-expanded="true" aria-controls="collapseeight">
+							<div class="d-flex">
+								<i class="fa-solid fa-users fs-2" style="color:black;"></i>
+								<div class="ps-5">
+									Users
+								</div>
+							</div>
+						</div>
+					</h2>
+					<div id="collapseeight" class="accordion-collapse collapse " aria-labelledby="headingeight" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="accordion bg-secondary" id="sub-accordionExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingeight">
+										<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseeight" aria-expanded="true" aria-controls="collapseeight">
+											Dashboard1
+										</button>
+									</h2>
+									<div id="sub-collapseeight" class="accordion-collapse collapse" aria-labelledby="sub-headingeight" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="sub-headingeight">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sub-collapseeight" aria-expanded="false" aria-controls="sub-collapseeight">
+											Dashboard2
+										</button>
+									</h2>
+									<div id="sub-collapseeight" class="accordion-collapse collapse" aria-labelledby="sub-headingeight" data-bs-parent="#sub-accordionExample">
+										<div class="accordion-body">
+											<strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. <code>.accordion-body</code>.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div >
+				<button class="openbtn bg secondary" onclick="toggle()">☰</button>
+			</div>
+						
+		<nav class="navbar navbar-expand-lg navbar">
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							
+						</li>
+						<div style="padding-left:35px; padding-top:8px; font-family: 'Great Vibes', cursive;font-size:30px;color:maroon;font-weight:200px;">
+							Radhe_Krishna
+						</div>
+					</ul>
+					
+					<div>
+						<img src="image/radhekrishna.jpg" class="img-fluid" style="height:80px; width:80px; border-radius:50%"/>
+					</div>
+					<div class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black;">
+							Dropdown
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</div>
+					<form class="d-flex">
+						<input class="form-control me-2  bg primary" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-primary" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		</div>
+		
+		<script>
+			/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+			let toggleVal =0;
+			function toggle() {
+				
+				
+				if(toggleVal == 0){
+					document.getElementById("mySidebar").style.width = "250px";
+					document.getElementById("main").style.marginLeft = "250px";
+					toggleVal=1;					
+				}
+				else{
+					document.getElementById("mySidebar").style.width = "80px";
+					document.getElementById("main").style.marginLeft = "80px";
+					toggleVal=0;	
+				}
+			}
+		</script>
+	</body>
+</html> 
+
+
+
+
+	
